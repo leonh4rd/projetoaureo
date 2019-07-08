@@ -5,9 +5,16 @@ using UnityEngine;
 public class ShootCannonball : MonoBehaviour
 {
     [SerializeField]
-    Transform cannonballPrefab;
+    private Transform cannonballPrefab = null;
     [SerializeField]
-    float speed;
+    private float speed = 1f;
+
+    private Transform hole;
+
+    private void Awake() 
+    {
+        hole = GetComponent<ShootDirection>().GetPositionAndOrientation();
+    }
 
     void Start()
     {
@@ -18,8 +25,8 @@ public class ShootCannonball : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Transform cannonball = Instantiate(cannonballPrefab, transform.position, Quaternion.identity);
-            Vector2 velocity = transform.right * speed;
+            Transform cannonball = Instantiate(cannonballPrefab, hole.position, Quaternion.identity);
+            Vector2 velocity = hole.right * speed;
             cannonball.GetComponent<Rigidbody2D>().AddForce(velocity, ForceMode2D.Impulse);
         }
     }
