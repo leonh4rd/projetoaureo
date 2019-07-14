@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6910310659613436553}
   - component: {fileID: 6910310659613436552}
   - component: {fileID: 6910310659613436559}
+  - component: {fileID: -2205044358598536459}
+  - component: {fileID: 3449536006148273906}
   - component: {fileID: 5573246068153154503}
   m_Layer: 0
   m_Name: cannonball
@@ -102,6 +104,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &-2205044358598536459
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910310659613436558}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.93
+--- !u!114 &3449536006148273906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910310659613436558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e532fa6e71ad5684cab783ae1e0a118b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5573246068153154503
 MonoBehaviour:
   m_ObjectHideFlags: 0

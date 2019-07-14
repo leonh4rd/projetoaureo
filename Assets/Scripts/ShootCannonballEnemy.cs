@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootCannonball : MonoBehaviour
+public class ShootCannonballEnemy : MonoBehaviour
 {
     [SerializeField]
     private Transform cannonballPrefab = null;
@@ -23,12 +23,6 @@ public class ShootCannonball : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Transform cannonball = Instantiate(cannonballPrefab, hole.position, Quaternion.identity);
-            Vector2 velocity = hole.right * speed;
-            cannonball.GetComponent<Rigidbody2D>().AddForce(velocity, ForceMode2D.Impulse);
-            cannonball.gameObject.layer = gameObject.layer;
-        }
+        
     }
 }
